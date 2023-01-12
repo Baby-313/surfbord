@@ -1,0 +1,29 @@
+.header__container{
+    display: flex;
+    padding-top: 16px;
+    margin-bottom: 91px;
+}
+
+.menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__list{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0px 38px;
+    }
+
+    &__link{
+        font-weight: 700;
+        font-size: 18px;
+        padding: 0 11px;
+    }
+}
+
+.contacts__phone{
+    font-weight: 700;
+    font-size: 22px;
+}

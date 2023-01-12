@@ -1,0 +1,75 @@
+.hello{
+    background: #1968B1;
+    &__content{
+        display: flex;
+        flex-direction: column;
+        width: 583px;
+        padding-bottom: 13px;
+    }
+
+    &__title{
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 58px;
+        color: #fff;
+        padding-right: 87px;
+        margin: 0;
+    }
+
+    &__text{
+        color: #fff;
+        font-weight: 400;
+        font-size: 21px;
+        line-height: 25px;
+        padding-bottom: 17px;
+    }
+
+    &__list{
+        display: flex;
+        padding: 0;
+        align-items: center;
+    }
+
+    &__item{
+        display: flex;
+        padding-right: 32px;
+        align-items: center;
+        width: 142px;
+    }
+
+}
+
+.hello__container{
+    background: url(../img/arnaud-mesureur-17OxKyThYPo-unsplash\ 1.png) top center no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.main__content{
+    display: flex;
+    flex-direction: column;
+}
+.btn{
+    width: 76px;
+    height: 19px;
+    background: #FEDB3F;
+    border-radius: 35px;
+    padding: 21px 41px;
+    color: #000;
+    font-weight: 800;
+    font-size: 16px;
+    margin-bottom: 32px;
+
+    &:hover{
+        transition: .4s;
+        background: #FFD517;
+    }
+}
+.bullet{
+    padding-right: 14px;
+    &__text{
+        color: #fff;
+        font-weight: 700;
+        font-size: 16px;
+    }
+}
