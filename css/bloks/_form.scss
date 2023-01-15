@@ -63,6 +63,10 @@
     &__btns{
         margin-bottom: 91px;
     }
+    &--payment-methods{
+        display: flex;
+        margin-bottom: 19px;
+    }
 }
 .label{
     display: flex;
@@ -103,10 +107,6 @@
         width: 156px;
         height: 60px;
     }
-}
-.payment__methods{
-    display: flex;
-    margin-bottom: 19px;
 }
 .checkbox{
     display: none;

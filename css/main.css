@@ -397,6 +397,12 @@
 .form__btns {
   margin-bottom: 91px;
 }
+.form--payment-methods {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 19px;
+}
 
 .label {
   display: -webkit-box;
@@ -444,13 +450,6 @@
 .btn--yeelow {
   width: 156px;
   height: 60px;
-}
-
-.payment__methods {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin-bottom: 19px;
 }
 
 .checkbox {
