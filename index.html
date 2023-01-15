@@ -131,6 +131,107 @@
                     </div>
                 </div>
             </section>
+            <section class="reviews">
+                <div class="reviews__container">
+                    <h1 class="reviews__title">Отзывы</h1>
+                    <div class="reviews__content">
+                        <img src="/img/olga.png" alt="" class="review__img">
+                        <div class="review__content">
+                            <h3 class="review__title">Лучший дизайн</h3>
+                            <p class="review__text">Я увидела доски на сайте и влюбилась в их дизайн. К летнему сезону я заказала себе доску в SurfBoard. Дизайнер команды - волшебница! Она учла все мои предпочтения и комментарии. В итоге получился прекрасный дизайн. А я катаюсь на доске, которая мне нравится)</p>
+                            <p class="user-name">Ольга Макарова</p>
+                        
+                        </div>
+                    </div>
+                    <ul class="reviews__list">
+                        <li class="reviews__item reviews__item--active">
+                            <a href="" class="reviews__link">
+                            <img src="/img/logofeedback.png" alt="" class="reviews__logo">
+                            </a>
+                        </li>
+                        <li class="reviews__item">
+                            <a href="" class="reviews__link">
+                            <img src="/img/logofeedback.png" alt="" class="reviews__logo">
+                            </a>
+                        </li>
+                        <li class="reviews__item">
+                            <a href="" class="reviews__link">
+                            <img src="/img/logofeedback.png" alt="" class="reviews__logo">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section class="form-section">
+                <div class="form-section__container">
+                    <h2 class="form-section__title">закажите доску</h2>
+                    <form method="post" class="form">
+                        <div class="form__info">
+                            <div class="form__info-user">
+                                <label for="name" class="label">
+                                Имя
+                                <input type="text" id="name" class="form__input form__input--name">
+                                </label>
+                                <label for="phone" class="label" >
+                                    Телефон
+                                    <input type="text" id="phone" placeholder="89022348912" class="form__input form__input--phone ">
+                                </label>
+                            </div>   
+                            <div class="form__address">
+                                <label for="street" class="label">
+                                    Улица
+                                    <input type="text" id="street" class="form__input form__input--street">
+                                </label>
+                                <label for="home" class="label">
+                                    Дом
+                                    <input type="text" id="home" class="form__input">
+                                </label>
+                                <label for="body" class="label">
+                                    Корпус
+                                    <input type="text" id="body" class="form__input">
+                                </label>
+                                <label for="flat" class="label">
+                                    Квартира
+                                    <input type="text" class="form__input">
+                                </label>      
+                                <label for="storey" class="label">
+                                    Этаж
+                                    <input type="text" class="form__input">
+                                </label>
+                            </div> 
+                        </div>
+                        <div class="form__controls">
+                            <div class="form__commentary">
+                                <label class="label">
+                                    Комментарий
+                                    <textarea class="form__input form__input--textarea"></textarea>
+                                </label>
+                            </div>
+                            <div class="payment__methods">
+                                <label class="controls">
+                                    <input type="radio" name="pay" class="radio"> 
+                                    <div class="fake__radio"></div>
+                                    Оплата наличными                       
+                                </label>
+                                <label class="controls">
+                                    <input type="radio" name="pay" class="radio"> 
+                                    <div class="fake__radio"></div>
+                                    Оплата картой                         
+                                </label>     
+                            </div>
+                            <label class="controls controls--checkbox">
+                                <input type="checkbox" checked class="checkbox">
+                                <div class="fake"></div>
+                                Не перезванивать
+                            </label>                
+                            <div class="form__btns">
+                                <button type="submit" class="btn btn--yeelow">ЗАКАЗАТЬ</button>
+                                <button type="reset" class="btn btn--grey">Очистить</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </section>
         </div>
     </div>
 </body>
