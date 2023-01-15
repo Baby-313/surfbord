@@ -1,5 +1,5 @@
 .form-section{
-
+    font-family: 'Alegreya Sans', sans-serif;
     &__container{
         background: url(../img/backgroundform.jpeg) center center no-repeat, #2B2B2B;
         display: flex;
@@ -16,10 +16,9 @@
     }
 }
 .form{
+    font-family: 'Open Sans';
     display: flex;
     color: #fff;
-
-
     &__info{
         display: flex;
         width: 460px;
