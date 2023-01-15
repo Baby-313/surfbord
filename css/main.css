@@ -140,6 +140,7 @@
 }
 
 .features {
+  font-family: "Alegreya Sans", sans-serif;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -234,6 +235,9 @@
   margin-bottom: 6px;
 }
 
+.reviews {
+  font-family: "Alegreya Sans", sans-serif;
+}
 .reviews__container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -417,6 +421,7 @@
 }
 
 .btn {
+  font-family: "Alegreya Sans", sans-serif;
   width: 76px;
   height: 19px;
   background: #FEDB3F;
