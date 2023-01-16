@@ -1,0 +1,84 @@
+.hello{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: url(../img/arnaud-mesureur-17OxKyThYPo-unsplash\ 1.jpeg)center center no-repeat;
+    background-color: #1968B1;
+    font-family: 'Alegreya Sans', sans-serif;
+    height: 100vh;
+    min-height: 650px;
+    color: #fff;
+
+    &__container{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+    }
+
+    &__title-section{
+        width: 41%;
+
+    }
+
+    &__main-title{
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 58px;
+        margin: 0;
+        margin-bottom: 17px;
+        text-transform: uppercase;
+    }
+
+    &__title-desc{
+        font-weight: 400;
+        font-size: 21px;
+        line-height: 25px;
+        margin-bottom: 39px;
+    }
+
+}
+.btn{
+    display: block;
+    width: 156px;
+    height: 60px;
+    background: #FEDB3F;
+    border-radius: 35px;
+    padding: 21px 41px;
+    color: #000;
+    font-weight: 800;
+    font-size: 16px;
+    margin-bottom: 32px;
+    border: none;
+    &:hover{
+        transition: .4s;
+        background: #FFD517;
+    }
+}
+/**
+.hello__container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.main__content{
+    display: flex;
+    flex-direction: column;
+}
+.btn{
+    width: 156px;
+    height: 60px;
+    background: #FEDB3F;
+    border-radius: 35px;
+    padding: 21px 41px;
+    color: #000;
+    font-weight: 800;
+    font-size: 16px;
+    margin-bottom: 32px;
+    border: none;
+    &:hover{
+        transition: .4s;
+        background: #FFD517;
+    }
+}
+*/

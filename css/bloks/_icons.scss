@@ -1,0 +1,24 @@
+.adventages{
+    display: flex;
+}
+.adventage{
+    &__icon{
+        width: 34px;
+        height: 34px;
+        margin-right: 14px;
+    }
+    &__text{
+        font-weight: 700;
+        font-size: 16px;
+    }
+    &__item{
+        display: flex;
+        align-items: center;
+        margin-right: 33px;
+    }
+    &__text{
+        width: 90px;
+        font-weight: 700;
+        font-size: 16px;
+    }
+}

@@ -1,5 +1,20 @@
+$containerwidth:940px;
+$baseFontSize:18px;
+
+//color 
+$yeelow:#FEDB3F;
+$write:#fff;
+
+@import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@300;400;700&family=Open+Sans&display=swap");
+@import url(/css/normalize.css);
+
+
 @import './bloks/_header.scss';
-@import './bloks/_content.scss';
+@import './bloks/_hello.scss';
 @import './bloks/_features.scss';
 @import './bloks/_reviews.scss';
 @import './bloks/_form.scss';
+@import './bloks/_icons.scss';
+@import './bloks/_section.scss';
+
+@import './_layout.scss';

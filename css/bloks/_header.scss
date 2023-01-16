@@ -1,7 +1,25 @@
-.header__container{
+.header{
     display: flex;
-    padding-top: 16px;
-    margin-bottom: 91px;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 28px;
+    margin-bottom: 46px;
+}
+.phone__number{
+    display: flex;
+    align-items: center;
+    font-size: 22px;
+}
+
+.phone-number__text{
+    font-weight: 700;
+    font-size: 22px;
+}
+
+.phone-number__icon{
+    width: 13px;
+    height: 14px;
+    margin-right: 5px;
 }
 
 .menu{
@@ -15,15 +33,16 @@
         align-items: center;
         padding: 0px 38px;
     }
+    &__item{
+        margin-right: 22px;
+        &:last-child{
+            margin-right: 47px;
+        }
+    }
 
     &__link{
         font-weight: 700;
         font-size: 18px;
-        padding: 0 11px;
     }
-}
 
-.contacts__phone{
-    font-weight: 700;
-    font-size: 22px;
 }
