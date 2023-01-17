@@ -80,8 +80,9 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: url(../img/arnaud-mesureur-17OxKyThYPo-unsplash\ 1.jpeg) center center no-repeat;
+  background: url(../img/cc54b080a52d3a32105f47fa904b563a.jpeg) bottom center no-repeat;
   background-color: #1968B1;
+  background-size: cover;
   font-family: "Alegreya Sans", sans-serif;
   height: 100vh;
   min-height: 650px;
@@ -137,33 +138,6 @@
   background: #FFD517;
 }
 
-/**
-.hello__container{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.main__content{
-    display: flex;
-    flex-direction: column;
-}
-.btn{
-    width: 156px;
-    height: 60px;
-    background: #FEDB3F;
-    border-radius: 35px;
-    padding: 21px 41px;
-    color: #000;
-    font-weight: 800;
-    font-size: 16px;
-    margin-bottom: 32px;
-    border: none;
-    &:hover{
-        transition: .4s;
-        background: #FFD517;
-    }
-}
-*/
 .features {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -376,6 +350,7 @@
 
 .form-section {
   background: url(../img/backgroundform.jpeg) top 20% center no-repeat;
+  background-color: #2B2B2B;
 }
 .form-section__container {
   display: -webkit-box;
@@ -586,6 +561,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  background-size: cover;
 }
 .section__container {
   display: -webkit-box;
