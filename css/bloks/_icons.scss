@@ -3,22 +3,22 @@
 }
 .adventage{
     &__icon{
-        width: 34px;
-        height: 34px;
-        margin-right: 14px;
+        width: 2.1rem;
+        height: 2.1rem;
+        margin-right: 0.87rem;
     }
     &__text{
         font-weight: 700;
-        font-size: 16px;
+        font-size: 1rem;
     }
     &__item{
         display: flex;
         align-items: center;
-        margin-right: 33px;
+        margin-right: 2rem;
     }
     &__text{
-        width: 90px;
+        width: 5.6rem;
         font-weight: 700;
-        font-size: 16px;
+        font-size: 1rem;
     }
 }

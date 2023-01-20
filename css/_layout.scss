@@ -1,10 +1,24 @@
+html{
+    font-size: $baseFontSize;
+
+    @include tablets{
+        font-size:15px;
+    }
+
+    @include phones{
+        font-size: 14px;
+    }
+    @include phones2{
+        font-size: 12.5px;
+    }
+}
+
 html,
 body{
     height: 100%;
 }
 
 body {
-    font-size: $baseFontSize;
     line-height: 1.42;
     font-family: 'Alegreya Sans', sans-serif;
     position: relative;
@@ -15,14 +29,15 @@ body {
 .wrapper{
     position: relative;
     width: 100%;
-    min-width: $containerwidth + 20px;
     min-height: 100%;
     overflow: hidden;
 }
 
 .container{
-    width: $containerwidth;
-    margin: 0 avto;
+    width: 95%;
+    max-width: $containerwidth;
+    margin: 0 auto;
+    position: relative;
 }
 
 h1,
@@ -59,9 +74,10 @@ a {
     color: #fff;
     background-color: transparent;
     text-decoration: none;
+    white-space: nowrap;
 }
 
 img{
-    display: block;
+    display: flex;
     width: 100%;
 }

@@ -1,4 +1,9 @@
 .hello{
+    @include tablets{
+        width: 100vw;
+        background: url(../img/cc54b080a52d3a32105f47fa904b563a.jpeg) bottom right 24% no-repeat;
+        background-size: cover;
+    }
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -7,7 +12,7 @@
     background-size: cover;
     font-family: 'Alegreya Sans', sans-serif;
     height: 100vh;
-    min-height: 650px;
+    min-height: 40.6rem;
     color: #fff;
 
     &__container{
@@ -19,40 +24,74 @@
 
     &__title-section{
         width: 41%;
+        @include tablets{
+            display: flex;
+            min-width: 100%;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 0 5%;
+        }
 
+    }
+
+    &__icons-section{
+        @include tablets{
+            display: none;
+        }
     }
 
     &__main-title{
         font-weight: 700;
-        font-size: 48px;
-        line-height: 58px;
+        font-size: 3rem;
+        line-height: 3.6rem;
         margin: 0;
-        margin-bottom: 17px;
+        margin-bottom: 1rem;
         text-transform: uppercase;
     }
 
     &__title-desc{
         font-weight: 400;
-        font-size: 21px;
-        line-height: 25px;
-        margin-bottom: 39px;
+        font-size: 1.3rem;
+        line-height: 1.75rem;
+        margin-bottom: 2.4rem;
     }
 
+    @include phones{
+        &__main-title{
+            font-size: 2.5rem;
+            line-height: 2.2rem;
+        }
+    }
 }
+
 .btn{
     display: block;
-    width: 156px;
-    height: 60px;
+    width: 9.75rem;
+    height: 3.75rem;
     background: #FEDB3F;
-    border-radius: 35px;
-    padding: 21px 41px;
+    border-radius: 2.18rem;
+    padding: 1.3rem 2.56rem;
     color: #000;
     font-weight: 800;
-    font-size: 16px;
-    margin-bottom: 32px;
+    font-size: 1rem;
+    margin-bottom: 2rem;
     border: none;
     &:hover{
         transition: .4s;
         background: #FFD517;
     }
 }
+/**
+@media (max-width:410px) {
+
+    .hello{
+        &__main-title{
+            font-size: 1.8rem;
+            line-height: 1.5rem;
+        }
+    }
+
+
+}
+*/

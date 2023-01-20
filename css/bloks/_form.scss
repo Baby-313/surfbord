@@ -2,61 +2,83 @@
     display: flex;
     &__row{
         display: flex;
-        margin-bottom: 12px;
+        margin-bottom: 0.75rem;
     }
     &__input{
         font-family: 'Open Sans', sans-serif;
         width: 100%;
         border: none;
-        padding: 18px 11px;
+        padding: 0.5rem 0.6rem;
         border: solid 3px transparent;
-        border-radius: 4px;
+        border-radius: 0.25rem;
         &:focus{
-            border: solid 3px #FEDB3F;
+            border: solid 0.18rem #FEDB3F;
             outline: none;
         }
         &--textarea{
-            height: 152px;
-            margin-bottom: 38px;
+            margin-bottom: 2.4rem;
         }
     }
-    &--payment-methods{
-        margin-bottom: 19px;
+    &__payment-methods{
+        display: flex;
+        margin-bottom: 1.2rem;
     }
     &__btns{
         display: flex;
     }
+    &__col{
+        flex: 1;
+        margin-right: 1.25rem;
+        &:last-child{
+            margin-right: 0;
+        }
+    }
+    @include tablets{
+        flex-direction: column;
+        &__payment-methods{
+            display: flex;
+        }
+    
+        &__col{
+            flex: 1;
+            margin-right:0;
+            margin: 0 18%;
+            &:last-child{
+                margin-right: 18%;
+            }
+        }
+        &__btns{
+            justify-content: center;
+        }
+    }
+
+
 }
+
 .form-section{
     background: url(../img/backgroundform.jpeg) top 20% center no-repeat,;
-    background-color: #2B2B2B;
     &__container{
         display: flex;
         flex-direction: column;
         align-items: center;
         color: #fff;
-        margin-top: 62px;
+        margin-top: 3.9rem;
     }
+
     &__title{
         color: #fff;
         font-weight: 700;
-        font-size: 48px;
-        line-height: 58px;
+        font-size: 3rem;
+        line-height: 3.6rem;
         margin: 0;
         text-transform: uppercase;
-        margin-bottom: 52px;
+        margin-bottom: 2rem;
     }
-}
-.form__col{
-    flex: 1;
-    margin-right: 20px;
-    &:last-child{
-        margin-right: 0;
-    }
+
 }
 .label{
     flex: 1;
-    margin-right: 20px;
+    margin-right: 1.25rem;
     &:last-child{
         margin-right: 0;
     }
@@ -65,12 +87,12 @@
 }
 .btn{
     &--grey{
-        width: 156px;
-        height: 60px;
+        width: 9.75rem;
+        height: 3.75rem;
         background: none;
         font-style: normal;
         font-weight: 400;
-        font-size: 18px;
+        font-size: 1.1rem;
         color: #fff;
         &:hover{
             transition: .4s;
@@ -78,8 +100,8 @@
         }
     }
     &--yeelow{
-        width: 156px;
-        height: 60px;
+        width: 9.75rem;
+        height: 3.75rem;
     }
 }
 
@@ -93,26 +115,26 @@
     display: flex;
     align-items: center;
     font-weight: 400;
-    font-size: 18px;
-    margin-right: 15px;
+    font-size: 1.1rem;
+    margin-right: 0.9rem;
     &--checkbox{
-        margin-bottom: 44px;
+        margin-bottom: 2.75rem;
     }
 }
 .fake{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 24px;
-    height: 24px;
-    border-radius: 4px;
-    margin-right: 10px;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 0.25rem;
+    margin-right: 0.6rem;
     background: #fff;
 
     &::before{
         content: "";
-        width: 10px;
-        height: 8px;
+        width: 0.6rem;
+        height: 0.5rem;
         display: flex;
         top: 50%;
         left: 50%;
@@ -125,16 +147,16 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 25px;
-        height: 25px;
+        width: 1.6rem;
+        height: 1.6rem;
         border-radius: 50%;
         background: #fff;
-        margin-right: 10px;
+        margin-right: 0.6rem;
 
         &::before{
             content: "";
-            width: 13px;
-            height: 13px;
+            width: 0.8rem;
+            height: 0.8rem;
             border-radius: 50%;
             display: flex;
             background: #FEDB3F;

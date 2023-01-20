@@ -1,48 +1,82 @@
 .header{
+    @include tablets{
+        background-color: #1968B1;
+        margin: 0;
+        width: 100%;
+        padding: 1.6rem 1.9rem;
+        margin-bottom: 6.7rem;
+    }
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
-    margin-top: 28px;
-    margin-bottom: 46px;
+    margin-top: 1.75rem;
+    margin-bottom: 2.85rem;
+}
+.logo{
+    display: flex;
+    &__img{
+        width: 3.4rem;
+        height: 2.4rem;
+        flex-shrink: 0;
+    }
 }
 .phone__number{
     display: flex;
     align-items: center;
-    font-size: 22px;
+    font-size: 1.4rem;
 }
 
 .phone-number__text{
+    line-height: 1;
     font-weight: 700;
-    font-size: 22px;
+    font-size: 1.4rem;
 }
 
 .phone-number__icon{
-    width: 13px;
-    height: 14px;
-    margin-right: 5px;
+    width: 0.8rem;
+    height: 0.87rem;
+    margin-right: 0.5rem;
 }
 
 .menu{
+    @include tablets{
+        display: none;
+    }
+
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
+    margin-top: 0.4rem;
 
     &__list{
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         align-items: center;
-        padding: 0px 38px;
+        padding: 0 2.4rem;
+        flex-wrap: wrap;
     }
+
     &__item{
-        margin-right: 22px;
+        margin-bottom: 0.6rem;
+        margin-right: 1.4rem;
         &:last-child{
-            margin-right: 47px;
+            margin-right: 3rem;
         }
     }
 
     &__link{
         font-weight: 700;
-        font-size: 18px;
+        font-size: 1.1rem;
     }
 
+}
+
+.dropdown{
+    display: none;
+    @include tablets{
+        display: flex;
+        &__menu{
+            display: none;
+        }
+    }
 }

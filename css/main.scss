@@ -1,9 +1,18 @@
 $containerwidth:940px;
-$baseFontSize:18px;
+$baseFontSize:16px;
+
+//breakpoint
+
+$tablets:768px;
+$phones:480px;
+$phone2:360px;
+
 
 //color 
 $yeelow:#FEDB3F;
 $write:#fff;
+
+@import "media";
 
 @import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@300;400;700&family=Open+Sans&display=swap");
 @import url(/css/normalize.css);
