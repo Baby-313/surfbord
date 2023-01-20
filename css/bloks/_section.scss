@@ -25,6 +25,14 @@
         text-transform: uppercase;
         margin-bottom: 2rem;
     }
+    @include phones{
+        .section{
+            &__title{
+                font-size: 2.4rem;
+                line-height: 2.2rem;
+            }
+        }
+    }
 }
 
 .headline{
@@ -32,7 +40,14 @@
     flex-direction: column;
     align-items: center;
     margin-bottom: 3rem;
-    
+    @include phones{
+        .headline{
+            &__title{
+                font-size: 2.4rem;
+                line-height: 2.2rem;
+            }
+        }
+    }
     &__title{
         font-weight: 700;
         font-size: 3rem;

@@ -74,6 +74,14 @@
         text-transform: uppercase;
         margin-bottom: 2rem;
     }
+    @include phones{
+        .form-section{
+            &__title{
+                font-size: 2.4rem;
+                line-height: 2.2rem;
+            }
+        }
+    }
 
 }
 .label{

@@ -52,9 +52,15 @@
 }
 
 .phone-number__icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
   width: 0.8rem;
   height: 0.87rem;
   margin-right: 0.5rem;
+  color: #fff;
 }
 
 .menu {
@@ -111,6 +117,13 @@
   }
   .dropdown__menu {
     display: none;
+  }
+  .dropdown__icon {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 1.6rem;
+    height: 1.5rem;
   }
 }
 
@@ -194,7 +207,7 @@
 }
 @media screen and (max-width: 480px) {
   .hello__main-title {
-    font-size: 2.5rem;
+    font-size: 2.4rem;
     line-height: 2.2rem;
   }
 }
@@ -262,8 +275,12 @@
           align-items: center;
 }
 .feature__icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   width: 4.12rem;
   height: 4.12rem;
+  color: #000;
 }
 .feature__icon-litle {
   width: 2.75rem;
@@ -334,6 +351,9 @@
   margin-bottom: 1.25rem;
 }
 @media screen and (max-width: 480px) {
+  .feature html {
+    font-size: 12px;
+  }
   .feature__text {
     margin-left: 0.75rem;
     width: 61%;
@@ -366,41 +386,6 @@
   }
 }
 
-/**
-
-@media (max-width:480px) {
-
-    .features{
-        flex-direction: column;
-    }
-
-    .feature{
-        &__text{
-            margin-left: 0.75rem;
-            width: 61%;
-            align-items: flex-start;
-            text-align: start;
-        }
-        &__desc {
-            width: 100%;
-            font-weight: 300;
-            font-size: 1.1rem;
-            padding:0;
-        }
-        &__item{
-            flex-direction: row;
-            margin-bottom: 2.6rem;
-        }
-        &__image{
-            margin-left: 0.6rem;
-            margin-bottom: 0;
-            width: 8rem;
-            height: 8rem;
-        }
-    }
-
-}
-*/
 .reviews {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -621,6 +606,12 @@
   text-transform: uppercase;
   margin-bottom: 2rem;
 }
+@media screen and (max-width: 480px) {
+  .form-section .form-section__title {
+    font-size: 2.4rem;
+    line-height: 2.2rem;
+  }
+}
 
 .label {
   -webkit-box-flex: 1;
@@ -749,6 +740,71 @@
   opacity: 1;
 }
 
+.footer__contacts {
+  color: #000;
+}
+.footer__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer-phone__number {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: #292929;
+  line-height: 1;
+  font-weight: 400;
+  font-size: 1.4rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer-phone__icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  width: 0.8rem;
+  height: 0.87rem;
+  margin-right: 0.5rem;
+  color: #292929;
+}
+
+.socials__icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.socials__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-right: 0.3rem;
+}
+.socials__icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: #B3B3B3;
+  width: 1.2rem;
+  height: 1.2rem;
+}
+.socials__icon:hover {
+  color: #000;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
+}
+
 .adventages {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -823,6 +879,12 @@
   text-transform: uppercase;
   margin-bottom: 2rem;
 }
+@media screen and (max-width: 480px) {
+  .section .section__title {
+    font-size: 2.4rem;
+    line-height: 2.2rem;
+  }
+}
 
 .headline {
   display: -webkit-box;
@@ -836,6 +898,12 @@
       -ms-flex-align: center;
           align-items: center;
   margin-bottom: 3rem;
+}
+@media screen and (max-width: 480px) {
+  .headline .headline__title {
+    font-size: 2.4rem;
+    line-height: 2.2rem;
+  }
 }
 .headline__title {
   font-weight: 700;
@@ -896,11 +964,6 @@ html {
 @media screen and (max-width: 768px) {
   html {
     font-size: 15px;
-  }
-}
-@media screen and (max-width: 480px) {
-  html {
-    font-size: 14px;
   }
 }
 @media screen and (max-width: 480px) {

@@ -33,9 +33,12 @@
 }
 
 .phone-number__icon{
+    display: flex;
+    flex-shrink: 0;
     width: 0.8rem;
     height: 0.87rem;
     margin-right: 0.5rem;
+    color: #fff;
 }
 
 .menu{
@@ -73,10 +76,17 @@
 
 .dropdown{
     display: none;
+
     @include tablets{
         display: flex;
         &__menu{
             display: none;
         }
+        &__icon{
+            display: flex;
+            width: 1.6rem;
+            height: 1.5rem;
+        }
     }
+
 }

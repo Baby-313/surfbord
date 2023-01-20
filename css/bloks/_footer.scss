@@ -1,0 +1,45 @@
+.footer{
+    &__contacts{
+        color: #000;
+    }
+    &__container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+.footer-phone__number{
+    display: flex;
+    color: #292929;
+    line-height: 1;
+    font-weight: 400;
+    font-size: 1.4rem;
+    align-items: center;
+}
+.footer-phone__icon{
+    display: flex;
+    flex-shrink: 0;
+    width: 0.8rem;
+    height: 0.87rem;
+    margin-right: 0.5rem;
+    color:#292929;
+}
+.socials{
+    &__icons{
+        display: flex;
+    }
+    &__item{
+        display: flex;
+        margin-right: 0.3rem;
+    }
+    &__icon{
+        display: flex;
+        color: #B3B3B3;
+        width: 1.2rem;
+        height: 1.2rem;
+        &:hover{
+            color: #000;
+            transition: .6s;
+        }
+    }
+}

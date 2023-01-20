@@ -6,9 +6,6 @@ html{
     }
 
     @include phones{
-        font-size: 14px;
-    }
-    @include phones2{
         font-size: 12.5px;
     }
 }
