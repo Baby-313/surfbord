@@ -109,6 +109,9 @@
 .dropdown {
   display: none;
 }
+.dropdown__link {
+  display: none;
+}
 @media screen and (max-width: 768px) {
   .dropdown {
     display: -webkit-box;
@@ -124,6 +127,9 @@
     display: flex;
     width: 1.6rem;
     height: 1.5rem;
+  }
+  .dropdown__link {
+    display: block;
   }
 }
 
@@ -958,6 +964,196 @@
 
 }
 */
+.slider__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  right: 0;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+.slider__list-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100vw;
+  overflow: hidden;
+}
+.slider__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.slider__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100vw;
+  padding-right: 4rem;
+}
+.slider__item:last-child {
+  padding: right 0;
+}
+@media screen and (max-width: 768px) {
+  .slider__item {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+.arrow__icon {
+  display: block;
+  width: 0.8rem;
+  height: 1.6rem;
+}
+
+.slide__img-wrap {
+  width: 26rem;
+  height: 34rem;
+  background: url(/img/surfboardback.png) center center no-repeat;
+  margin-right: 3.6rem;
+  background-size: contain;
+}
+@media screen and (max-width: 768px) {
+  .slide__img-wrap {
+    margin: 0;
+    width: 19.9rem;
+    height: 26rem;
+  }
+}
+.slide__desc {
+  font-weight: 400;
+  font-size: 18px;
+  margin-bottom: 1.5rem;
+}
+.slide__content {
+  width: 40%;
+}
+@media screen and (max-width: 768px) {
+  .slide__content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 80%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+  }
+}
+.slide__title {
+  color: #000;
+  font-weight: 700;
+  font-size: 36px;
+  text-transform: uppercase;
+}
+.slide__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 1.5rem;
+}
+.slide__bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+@media screen and (max-width: 768px) {
+  .slide__bottom {
+    width: 60%;
+  }
+}
+.slide__btn {
+  margin: 0;
+}
+.slide__price {
+  color: #151515;
+  font-weight: 300;
+  font-size: 3.75rem;
+  text-transform: uppercase;
+}
+
+.slide__params {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 5.6rem;
+  height: 5.6rem;
+  background-color: #3A587E;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  border-radius: 5%;
+  margin-bottom: 3.2rem;
+}
+.slide__params__img-wrap {
+  width: 2.3rem;
+  height: 2.3rem;
+  margin-bottom: 0.4rem;
+}
+.slide__params__img {
+  width: 2.3rem;
+  height: 2.3rem;
+}
+.slide__params__text {
+  color: #fff;
+  font-weight: 700;
+  font-size: 14px;
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+}
+@media screen and (max-width: 768px) {
+  .slide__params {
+    display: none;
+  }
+}
+
+.info__item {
+  margin-right: 3.2rem;
+}
+.info__item:last-child {
+  margin: 0;
+}
+.info__title {
+  color: #666;
+  font-weight: 400;
+  font-size: 18px;
+}
+.info__text {
+  color: #000;
+  font-weight: 700;
+  font-size: 18px;
+}
+
 html {
   font-size: 16px;
 }
