@@ -73,25 +73,3 @@
     }
 
 }
-
-.dropdown{
-    display: none;
-    &__link{
-        display: none;
-    }
-    @include tablets{
-        display: flex;
-        &__menu{
-            display: none;
-        }
-        &__icon{
-            display: flex;
-            width: 1.6rem;
-            height: 1.5rem;
-        }
-        &__link{
-            display: block;
-        }
-    }
-
-}

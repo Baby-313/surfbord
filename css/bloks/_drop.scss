@@ -1,0 +1,54 @@
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(00, 00, 00, .2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+  }
+  .dropdown{
+    position: relative;
+    display: none;
+    @include tablets{
+      display: block;
+    }
+    &__icon{
+      display: none;
+      @include tablets{
+        display: flex;
+        width: 1.6rem;
+        height: 1.5rem;
+      }
+    }
+    &__menu{
+        display: flex;
+        width: 100vw;
+        height: 100vh;
+        top: 0;
+        background: #313131;
+        justify-content: center;
+        align-items: center;
+    }
+  }
+  .close {
+    color: #fff;
+    position: absolute;
+    right: 1.9rem;
+    top: 1.6rem ;
+    width: 20px;
+    height: 20px;
+  }
+.menu__link{
+    &--dropdown{
+        font-weight: 400;
+        font-size: 2.25rem;
+        &:hover{
+            color: #FFD517;
+            transition: .5s;
+        }
+    }
+}

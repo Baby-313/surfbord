@@ -1,4 +1,5 @@
 .slider{
+    position: relative;
     &__list{
         display: flex;
         position: relative;
@@ -8,6 +9,9 @@
             display: flex;
             width: 100vw;
             overflow: hidden;
+            @include tablets{
+                justify-content: center;
+            }
         }
     }
     &__container{
@@ -16,15 +20,37 @@
     }
     &__item{
         display: flex;
-        justify-content: center;
         width: 100vw;
-        padding-right: 4rem;
+        margin-left: 3rem;
         &:last-child{
-            padding: right 0;
+            padding-left: 0;
+            margin-left: 0;
         }
         @include tablets{
             flex-direction: column;
             align-items: center;
+            margin-left: 100vw;
+            &:last-child{
+                margin-left: 0;
+            }
+        }
+    }
+    &__arrow{
+        @include tablets{
+            position: absolute;
+            margin-bottom: 19.6rem;
+            margin-left: 39.6rem;
+            &--left{
+            margin-left: 8.5rem;
+            }
+        }
+        @include phones{
+            position: absolute;
+            margin-bottom: 19.6rem;
+            margin-left: 34.6rem;
+            &--left{
+            margin-left: .5rem;
+            }
         }
     }
 
@@ -34,95 +60,6 @@
     width: 0.8rem;
     height: 1.6rem; 
 
-}
-.slide{
-    &__img-wrap{
-        width: 26rem;
-        height: 34rem;
-        background: url(/img/surfboardback.png)center center no-repeat;
-        margin-right: 3.6rem;
-        background-size: contain;
-        @include tablets{
-            margin: 0;
-            width: 19.9rem;
-            height: 26rem;
-        }
-    }
-    &__desc{
-        font-weight: 400;
-        font-size: 18px;
-        margin-bottom: 1.5rem;
-    }
-    &__content{
-        width: 40%;
-        @include tablets{
-            display: flex;
-            width: 80%;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-        }
-    }
-    &__title{
-        color: #000;
-        font-weight: 700;
-        font-size: 36px;
-        text-transform: uppercase;
-    }
-    &__info{
-        display: flex;
-        margin-bottom: 1.5rem;
-    }
-    &__bottom{
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        @include tablets{
-            width: 60%;
-        }
-    }
-    &__btn{
-        margin: 0;
-    }
-    &__price{
-        color: #151515;
-        font-weight: 300;
-        font-size: 3.75rem;
-        text-transform: uppercase;
-    }
-
-}
-.slide__params{
-    display: flex;
-    width: 5.6rem;
-    height: 5.6rem;
-    background-color: #3A587E;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-end;
-    border-radius: 5%;
-    margin-bottom: 3.2rem;
-    &__img-wrap{
-        width: 2.3rem;
-        height: 2.3rem;
-        margin-bottom: 0.4rem;
-    }
-    &__img{
-        width: 2.3rem;
-        height: 2.3rem;
-    }
-    &__text{
-        color: #fff;
-        font-weight: 700;
-        font-size: 14px;
-        text-transform: uppercase;
-        margin-bottom: 0.75rem;
-
-    }
-
-    @include tablets{
-        display: none;
-    }
 }
 .info{
     &__item{
@@ -141,4 +78,46 @@
         font-weight: 700;
         font-size: 18px;
     }
+}
+.params{
+    width: 273px;
+    height: 291px;
+    position: absolute;
+    border-radius: 5px;
+    padding: 25px;
+    top: 0%;
+    right: 0%;
+    left: 100%;
+    display: none;
+    color: #1E1F20;
+    background: rgba(255, 255, 255, 0.8);
+    background: rgba(0, 0, 0, 0.06);
+    &__img{
+        width: 24px;
+        height: 24px;
+    }
+    &__item{
+        display: flex;
+        padding-bottom: 28px;
+    }
+    &__img-icon{
+        width: 24px;
+        height: 24px;
+    }
+    &__content{
+        display: flex;
+        justify-content: space-between;
+        width: 75%;
+    }
+    &__text{
+        color: #000;
+        font-weight: 400;
+        font-size: 16px;
+    }
+    &__title{
+        color: #000;
+        font-weight: 500;
+        font-size: 16px;
+    }
+
 }
