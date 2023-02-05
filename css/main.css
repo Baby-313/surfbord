@@ -1356,6 +1356,13 @@
           align-items: center;
   min-height: 646px;
 }
+@media screen and (max-width: 768px) {
+  .team-section__container {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
 
 .humans__list {
   display: -webkit-box;

@@ -4,6 +4,9 @@
         flex-direction: column;
         align-items: center;
         min-height: 646px;
+        @include tablets{
+            justify-content: center;
+        }
     }
 }
 .humans__list{
