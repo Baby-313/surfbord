@@ -66,3 +66,20 @@ $(".click__info").click(function (e) {
 	$(this).next().slideToggle();
 	$(this).parent().addClass('slide');
 });
+
+const findBlockByAlias=alias=>{
+  return $(".reviews__item").filter((ndx,item)=>{
+    return $(item).attr("data-linked")==alias
+  })
+}
+$(".avatar__link").click(function (e) {
+	e.preventDefault();
+
+  const $this=$(e.currentTarget);
+  const terget=$this.attr("data-open");
+  const itemToShow=findBlockByAlias(terget);
+  const curItem=$this.closest(".avatar__item");
+
+  itemToShow.addClass("active").siblings().removeClass("active");
+  curItem.addClass("active").siblings().removeClass("active");
+});

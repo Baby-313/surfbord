@@ -445,47 +445,62 @@
             </section>
             <section class="section">
                 <div class="container section__container">
-                    <h1 class="section__title">Отзывы</h1>
-                    <ul class="rewiews__list reviews">
-                        <li class="reviews__item active">
-                            <img src="./img/olga.png" alt="" class="review__img">
-                            <div class="review__content">
-                                <h3 class="review__title">Лучший дизайн</h3>
-                                <p class="review__text">Я увидела доски на сайте и влюбилась в их дизайн. К летнему сезону я заказала себе доску в SurfBoard. Дизайнер команды - волшебница! Она учла все мои предпочтения и комментарии. В итоге получился прекрасный дизайн. А я катаюсь на доске, которая мне нравится)</p>
-                                <p class="user-name">Ольга Макарова</p>
-                            </div>
-                        </li>
-                        <li class="reviews__item">
-                            <img src="./img/olga.png" alt="" class="review__img">
-                            <div class="review__content">
-                                <h3 class="review__title">Лучший дизайн</h3>
-                                <p class="review__text">Я увидела доски на сайте и влюбилась в их дизайн. К летнему сезону я заказала себе доску в SurfBoard. Дизайнер команды - волшебница! Она учла все мои предпочтения и комментарии. В итоге получился прекрасный дизайн. А я катаюсь на доске, которая мне нравится)</p>
-                                <p class="user-name">Ольга Макарова</p>
-                            </div>
-                        </li>
-                        <li class="reviews__item">
-                            <img src="./img/olga.png" alt="" class="review__img">
-                            <div class="review__content">
-                                <h3 class="review__title">Лучший дизайн</h3>
-                                <p class="review__text">Я увидела доски на сайте и влюбилась в их дизайн. К летнему сезону я заказала себе доску в SurfBoard. Дизайнер команды - волшебница! Она учла все мои предпочтения и комментарии. В итоге получился прекрасный дизайн. А я катаюсь на доске, которая мне нравится)</p>
-                                <p class="user-name">Ольга Макарова</p>
-                            </div>
-                        </li>
-                    </ul>
+                    <div class="section__title">Отзывы</div>
+                    <div class="reviews__display reviews">
+                        <ul class="reviews__list">
+                            <li class="reviews__item active" data-linked="one">
+                                <div class="reviews__display-inner">
+                                    <img src="./img/olga.png" alt="" class="review__img">
+                                    <div class="review__content">
+                                        <h3 class="review__title">Лучший дизайн</h3>
+                                        <p class="review__text">Я увидела доски на сайте и влюбилась в их дизайн. К летнему сезону я заказала себе доску в SurfBoard. Дизайнер команды - волшебница! Она учла все мои предпочтения и комментарии. В итоге получился прекрасный дизайн. А я катаюсь на доске, которая мне нравится)</p>
+                                        <p class="user-name">Ольга Макарова</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="reviews__item" data-linked="two">
+                                <div class="reviews__display-inner">
+                                    <img src="./img/Mark.png" alt="" class="review__img">
+                                    <div class="review__content">
+                                        <h3 class="review__title">Нереальная скорость</h3>
+                                        <p class="review__text">
+                                            Я занимаюсь профессиональным спортом. Доверил изготовление доски для соревнований ребятам из Surfboard и не пожалел: 1 место на соревнованиях. 
+                                            Нереальная скорость, устойчивая, удобная и легкая: всё что нужно для победы на соревнованиях!                                            
+                                        </p>
+                                        <p class="user-name">Марк Брюлов</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="reviews__item" data-linked="three">
+                                <div class="reviews__display-inner">
+                                    <img src="./img/vasya.png" alt="" class="review__img">
+                                    <div class="review__content">
+                                        <h3 class="review__title">Устойчивость и безопасность</h3>
+                                        <p class="review__text">
+                                            Я заказывал доски для своих детей. Мне было важно, чтобы они были устойчивые, так как безопасность детей на первом месте. 
+                                            Доски были изготовлены по индивидуальным замерам с учетом роста и веса каждого ребенка. 
+                                            Теперь дети катаются и им нравится!
+                                        </p>
+                                        <p class="user-name">Василий Поперечный</p>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
                     <ul class="avatar__list">
-                        <li class="avatar__item avatar__item--active">
-                            <a href="" class="avatar__link">
-                            <img src="./img/logofeedback.png" alt="" class="avatar__logo">
+                        <li class="avatar__item">
+                            <a class="avatar__link" data-open="one">
+                            <img src="./img/olga.png" alt="" class="avatar__logo">
                             </a>
                         </li>
-                        <li class="avatar__item avatar__item--active">
-                            <a href="" class="avatar__link">
-                            <img src="./img/logofeedback.png" alt="" class="avatar__logo">
+                        <li class="avatar__item active">
+                            <a class="avatar__link" data-open="two">
+                            <img src="./img/Mark.png" alt="" class="avatar__logo">
                             </a>
                         </li>
-                        <li class="avatar__item avatar__item--active">
-                            <a href="" class="avatar__link">
-                            <img src="./img/logofeedback.png" alt="" class="avatar__logo">
+                        <li class="avatar__item">
+                            <a class="avatar__link" data-open="three">
+                            <img src="./img/vasya.png" alt="" class="avatar__logo">
                             </a>
                         </li>
                     </ul>
