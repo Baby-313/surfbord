@@ -21,7 +21,8 @@
     &__item{
         display: flex;
         width: 100vw;
-        margin-left: 3rem;
+        max-width: 914px;
+        justify-content: center;
         &:last-child{
             padding-left: 0;
             margin-left: 0;
@@ -35,25 +36,27 @@
             }
         }
     }
-    &__arrow{
-        @include tablets{
-            position: absolute;
-            margin-bottom: 19.6rem;
-            margin-left: 39.6rem;
-            &--left{
-            margin-left: 8.5rem;
-            }
-        }
-        @include phones{
-            position: absolute;
-            margin-bottom: 19.6rem;
-            margin-left: 34.6rem;
-            &--left{
-            margin-left: .5rem;
-            }
+
+}
+.arrow{
+    @include tablets{
+        position: absolute;
+        margin-bottom: 19.6rem;
+        margin-left: 39.6rem;
+        &--left{
+        z-index: 1;
+        margin-left: 8.5rem;
         }
     }
-
+    @include phones{
+        position: absolute;
+        margin-bottom: 19.6rem;
+        margin-left: 34.6rem;
+        &--left{
+        z-index: 1;
+        margin-left: .5rem;
+        }
+    }
 }
 .arrow__icon{
     display: block;

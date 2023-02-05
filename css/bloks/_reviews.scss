@@ -1,16 +1,32 @@
-.reviews{
-    display: flex;
+.rewiews{
+    &__list{
+        display: flex;
+        background: #F8FAF9;
+        display: flex;
+        flex-direction: row;
+        padding: 2.6rem 8.87rem 2.6rem 2.6rem;
+        margin-bottom: 0.7rem;
+        @include tablets{
+            flex-direction: column;
+            align-items: center;
+            padding: 3.5rem 1.4rem 1.4rem;
+        }
+    }
+}
+.reviews__item{
+    display: none;
+}
+li.active{
+	display: flex;
     background: #F8FAF9;
-    display: flex;
-    flex-direction: row;
-    padding: 2.6rem 8.87rem 2.6rem 2.6rem;
     margin-bottom: 0.7rem;
-
     @include tablets{
         flex-direction: column;
         align-items: center;
         padding: 3.5rem 1.4rem 1.4rem;
     }
+}
+.avatar{
     &__list{
         display: flex;
         align-items: center;
@@ -21,11 +37,13 @@
         display: flex;
         margin: 0.37rem;
     }
+
     &__link{
         display: block;
         width: 4.6rem;
         height: 4.6rem;
     }
+    
     &__logo{
         display: block;
         margin: 0.187rem;

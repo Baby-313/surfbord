@@ -106,7 +106,7 @@
                     </div>
                 </div>
             </section>
-            <section class="section ">
+            <section class="section">
                 <div class="container section__container">
                     <div class="headline">
                         <h1 class="headline__title">почему Surfboard?</h1>
@@ -174,14 +174,14 @@
             </section>
             <section class="section slider__section slider">
                 <div class="container slider__container">
-                    <div class="slider__arrow slider__arrow--left">
+                    <a class="arrow arrow--left" id="left" href="#">
                         <svg class="arrow__icon">
                             <use xlink:href="sprite.svg#Vector 1"></use>
                         </svg>
-                    </div>
+                    </a>
                     <div class="slider__list-wrap">
-                        <ul class="slider__list">
-                            <li class="slider__item slide">
+                        <ul class="slider__list" id="list">
+                            <li class="slider__item slide" id="slide">
                                 <div class="slide__img-wrap">
                                     <img src="./img/surf1.png" alt="" class="slide__img">
                                 </div>
@@ -274,7 +274,7 @@
                                     </div>
                                 </div>
                             </li>
-                            <li class="slider__item slide">
+                            <li class="slider__item slide" id="slide">
                                 <div class="slide__img-wrap">
                                     <img src="./img/surf1.png" alt="" class="slide__img">
                                 </div>
@@ -359,39 +359,133 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="slider__arrow">
+                    <a class="arrow" id="right" href="#">
                         <svg class="arrow__icon">
                             <use xlink:href="sprite.svg#Vector 2"></use>
                         </svg>
+                    </a>
+                </div>
+            </section>
+            <section class="section team-section">
+                <div class="container team-section__container">
+                    <h1 class="section__title">команда</h1>
+                    <div class="team-section__content">
+                        <ul class="humans__list">
+                            <li class="human">
+                                <img src="./img/team1.png" alt="" class="human__avatar">
+                                <a href="#" class="click__info">
+                                    <h2 class="name">Борис Федорович</h2>
+                                    <svg class="team__buttom">
+                                        <use xlink:href="sprite.svg#Polygon 2"></use>
+                                    </svg>
+                                    <svg class="team__buttom team__buttom--active">
+                                        <use xlink:href="sprite.svg#Polygon 1"></use>
+                                    </svg>
+                                </a>
+                                <div class="human__info">
+                                    <img src="./img/team1.png" alt="" class="human__avatar--tablets">
+                                    <h3 class="human__profession">Главный технолог</h3>
+                                    <p class="info">Отвечает за материалы и разработку досок</p>
+                                </div>
+                            </li>
+                            <li class="human">
+                                <img src="./img/team2.png" alt="" class="human__avatar">
+                                    <a href="#" class="click__info">
+                                        <h2 class="name">Ольга Невзорова</h2>
+                                        <svg class="team__buttom">
+                                            <use xlink:href="sprite.svg#Polygon 2"></use>
+                                        </svg>
+                                        <svg class="team__buttom team__buttom--active">
+                                            <use xlink:href="sprite.svg#Polygon 1"></use>
+                                        </svg>
+                                    </a>
+                                <div class="human__info">
+                                    <img src="./img/team2.png" alt="" class="human__avatar--tablets">
+                                    <h3 class="human__profession">Дизайнер</h3>
+                                    <p class="info">Создает дизайн серфбордов</p>
+                                </div>
+                            </li>
+                            <li class="human">
+                                <img src="./img/team3.png" alt="" class="human__avatar">
+                                    <a href="#" class="click__info">
+                                        <h2 class="name">Ингвар Нильсон</h2>
+                                        <svg class="team__buttom">
+                                            <use xlink:href="sprite.svg#Polygon 2"></use>
+                                        </svg>
+                                        <svg class="team__buttom team__buttom--active">
+                                            <use xlink:href="sprite.svg#Polygon 1"></use>
+                                        </svg>
+                                    </a>
+                                <div class="human__info">
+                                    <img src="./img/team3.png" alt="" class="human__avatar--tablets">
+                                    <h3 class="human__profession">Спортсмен</h3>
+                                    <p class="info">Участвует в разработке серфбордов</p>
+                                </div>
+                            </li>
+                            <li class="human">
+                                <img src="./img/team4.png" alt="" class="human__avatar">
+                                    <a href="#" class="click__info" id="open" >
+                                        <h2 class="name">Екатерина Иванова</h2>
+                                        <svg class="team__buttom">
+                                            <use xlink:href="sprite.svg#Polygon 2"></use>
+                                        </svg>
+                                        <svg class="team__buttom team__buttom--active">
+                                            <use xlink:href="sprite.svg#Polygon 1"></use>
+                                        </svg>
+                                    </a>
+                                <div class="human__info" id="info" >
+                                    <img src="./img/team4.png" alt="" class="human__avatar--tablets">
+                                    <h3 class="human__profession">Тестировщик</h3>
+                                    <p class="info">Отвечает за разработку новых продуктов</p>
+                                </div>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </section>
             <section class="section">
                 <div class="container section__container">
                     <h1 class="section__title">Отзывы</h1>
-                    <div class="reviews">
-                        <img src="./img/olga.png" alt="" class="review__img">
-                        <div class="review__content">
-                            <h3 class="review__title">Лучший дизайн</h3>
-                            <p class="review__text">Я увидела доски на сайте и влюбилась в их дизайн. К летнему сезону я заказала себе доску в SurfBoard. Дизайнер команды - волшебница! Она учла все мои предпочтения и комментарии. В итоге получился прекрасный дизайн. А я катаюсь на доске, которая мне нравится)</p>
-                            <p class="user-name">Ольга Макарова</p>
-                        
-                        </div>
-                    </div>
-                    <ul class="reviews__list">
-                        <li class="reviews__item reviews__item--active">
-                            <a href="" class="reviews__link">
-                            <img src="./img/logofeedback.png" alt="" class="reviews__logo">
-                            </a>
+                    <ul class="rewiews__list reviews">
+                        <li class="reviews__item active">
+                            <img src="./img/olga.png" alt="" class="review__img">
+                            <div class="review__content">
+                                <h3 class="review__title">Лучший дизайн</h3>
+                                <p class="review__text">Я увидела доски на сайте и влюбилась в их дизайн. К летнему сезону я заказала себе доску в SurfBoard. Дизайнер команды - волшебница! Она учла все мои предпочтения и комментарии. В итоге получился прекрасный дизайн. А я катаюсь на доске, которая мне нравится)</p>
+                                <p class="user-name">Ольга Макарова</p>
+                            </div>
                         </li>
                         <li class="reviews__item">
-                            <a href="" class="reviews__link">
-                            <img src="./img/logofeedback.png" alt="" class="reviews__logo">
-                            </a>
+                            <img src="./img/olga.png" alt="" class="review__img">
+                            <div class="review__content">
+                                <h3 class="review__title">Лучший дизайн</h3>
+                                <p class="review__text">Я увидела доски на сайте и влюбилась в их дизайн. К летнему сезону я заказала себе доску в SurfBoard. Дизайнер команды - волшебница! Она учла все мои предпочтения и комментарии. В итоге получился прекрасный дизайн. А я катаюсь на доске, которая мне нравится)</p>
+                                <p class="user-name">Ольга Макарова</p>
+                            </div>
                         </li>
                         <li class="reviews__item">
-                            <a href="" class="reviews__link">
-                            <img src="./img/logofeedback.png" alt="" class="reviews__logo">
+                            <img src="./img/olga.png" alt="" class="review__img">
+                            <div class="review__content">
+                                <h3 class="review__title">Лучший дизайн</h3>
+                                <p class="review__text">Я увидела доски на сайте и влюбилась в их дизайн. К летнему сезону я заказала себе доску в SurfBoard. Дизайнер команды - волшебница! Она учла все мои предпочтения и комментарии. В итоге получился прекрасный дизайн. А я катаюсь на доске, которая мне нравится)</p>
+                                <p class="user-name">Ольга Макарова</p>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="avatar__list">
+                        <li class="avatar__item avatar__item--active">
+                            <a href="" class="avatar__link">
+                            <img src="./img/logofeedback.png" alt="" class="avatar__logo">
+                            </a>
+                        </li>
+                        <li class="avatar__item avatar__item--active">
+                            <a href="" class="avatar__link">
+                            <img src="./img/logofeedback.png" alt="" class="avatar__logo">
+                            </a>
+                        </li>
+                        <li class="avatar__item avatar__item--active">
+                            <a href="" class="avatar__link">
+                            <img src="./img/logofeedback.png" alt="" class="avatar__logo">
                             </a>
                         </li>
                     </ul>
@@ -539,6 +633,7 @@
           </div>
         </div>
     </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="./js/modal.js"></script>
 </body>
 </html>

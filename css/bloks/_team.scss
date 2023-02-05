@@ -1,0 +1,92 @@
+.team-section{
+    &__container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+}
+.humans__list{
+    display: flex;
+    @include tablets{
+        flex-direction: column;
+        width: 14rem;
+    }
+}
+.human{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 1rem;
+    &:last-child{
+        margin-right: 0;
+    }
+    @include tablets{
+        margin-right: 0;
+    }
+    &__avatar{
+        width: 14rem;
+        margin-bottom: 1.3rem;
+        &--tablets{
+            display: none;
+        }
+        @include tablets{
+            display: none;
+            &--tablets{
+                display: block;
+                width: 14rem;
+                margin-bottom: 1.3rem;
+                margin-right: 0;
+            }
+        }
+
+    }
+    &__name{
+        color: #000;
+        font-weight: 700;
+        font-size: 1.15rem;
+        line-height: 25px;
+    }
+    &__info{
+        display: none;
+        width: 100%;
+        background: #FFF;
+        padding: 10px 0;
+        text-align: center;
+    }
+}
+.team__buttom{
+    display: block;
+    width: 9px;
+    height: 9px;
+}
+.team__buttom--active{
+    display: none;
+    &:active{
+        display: block;
+    }
+}
+.name{
+    color: #000;
+    font-weight: 700;
+    font-size: 1.15rem;
+    line-height: 25px;
+    margin: 0;
+    margin-right: 4px;
+}
+.click__info{
+    display: flex;
+    color: #000;
+    align-items: center;
+    @include tablets{
+        margin-bottom: 1rem;
+    }
+    &:active{
+        .team__buttom{
+            display: none;
+            &--active{
+                display: block;
+            }
+        }
+    }
+}
