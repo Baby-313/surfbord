@@ -5,7 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="./css/main.css">
-    <title></title>
+    <link 
+        rel="stylesheet" 
+        href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"
+    >
+    <title>SurfBoard</title>
 </head>
 <body>
     <div class="wrapper">
@@ -510,15 +514,16 @@
                 <div class=" container form-section__container">
                     <h2 class="form-section__title">закажите доску</h2>
                     <form class="form">
+                        <input type="hidden" name="to" value="yusufdj9006@icloud.com">
                         <div class="form__col">
                             <div class="form__row">
                                 <label class="label">
                                     Имя
-                                    <input type="text" class="form__input form__input--name">
+                                    <input type="text" name="name" class="form__input form__input--name">
                                 </label>
                                 <label class="label">
                                     Телефон
-                                    <input type="text" placeholder="89022348912" class="form__input">
+                                    <input type="text" name="phone" placeholder="89022348912" class="form__input">
                                 </label>
                             </div>   
                             <div class="form__row">
@@ -550,7 +555,7 @@
                             <div class="form__row">
                                 <label class="label">
                                     Комментарий
-                                    <textarea class="form__input form__input--textarea"></textarea>
+                                    <textarea name="comment" class="form__input form__input--textarea"></textarea>
                                 </label>
                             </div>
                             <div class="form__payment-methods">
@@ -573,6 +578,16 @@
                             <div class="form__btns">
                                 <button type="submit" class="btn btn--yeelow">ЗАКАЗАТЬ</button>
                                 <button type="reset" class="btn btn--grey">Очистить</button>
+                            </div>
+                        </div>
+                        <div id="modal" class="modal">
+                            <div class="modal__container">
+                                <div class="modal__content">
+                                    Сообщеие отправлено
+                                </div>
+                                <div class="moda__button-container">
+                                    <a href="" class="btn app-close-modal btn--theme--yellow">ЗАКРЫТЬ</a>
+                                </div>
                             </div>
                         </div>
                     </form>
@@ -649,6 +664,7 @@
         </div>
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="./js/modal.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./js/main.js"></script>
 </body>
 </html>

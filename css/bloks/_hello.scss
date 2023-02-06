@@ -77,21 +77,9 @@
     font-size: 1rem;
     margin-bottom: 2rem;
     border: none;
+    text-align: center;
     &:hover{
         transition: .4s;
         background: #FFD517;
     }
 }
-/**
-@media (max-width:410px) {
-
-    .hello{
-        &__main-title{
-            font-size: 1.8rem;
-            line-height: 1.5rem;
-        }
-    }
-
-
-}
-*/

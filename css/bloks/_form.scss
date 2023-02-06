@@ -54,7 +54,9 @@
 
 
 }
-
+.input-error{
+    border: solid 0.18rem #ffb707;
+}
 .form-section{
     background: url(../img/backgroundform.jpeg) top 20% center no-repeat,;
     &__container{

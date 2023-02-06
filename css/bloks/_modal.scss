@@ -1,0 +1,30 @@
+.modal{
+    display: none;
+    color: #000;
+    &__container{
+        padding: 35px 60px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        background: #fff;
+    }
+    &__content{
+        margin-bottom: 15px;
+    }
+}
+.fancybox-inner{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #333537;
+}
+.fancybox-toolbar,.fancybox-navigation,.fancybox-infobar,.fancybox-button{
+    display: none;
+}
+.error-modal{
+    font-weight: 500;
+    color: red;
+}
