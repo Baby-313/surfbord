@@ -15,7 +15,6 @@ body{
     height: 100%;
 }
 
-
 body {
     line-height: 1.42;
     font-family: 'Alegreya Sans', sans-serif;
@@ -23,7 +22,14 @@ body {
     margin: 0;
     color: #666666;
 }
-
+.disable-scroll{
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    width: 100%;
+}
 .wrapper{
     position: relative;
     width: 100%;

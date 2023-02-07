@@ -1118,7 +1118,7 @@
 }
 
 .overlay {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   right: 0;
@@ -1546,6 +1546,15 @@ body {
   position: relative;
   margin: 0;
   color: #666666;
+}
+
+.disable-scroll {
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+  left: 0;
+  top: 0;
+  width: 100%;
 }
 
 .wrapper {

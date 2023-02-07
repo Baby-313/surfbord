@@ -4,6 +4,10 @@ const body = document.body;
 
 openButton.addEventListener("click", e => {
   body.appendChild(successModal);
+  let pagePosition=window.scrollY;
+  body.classList.add('disable-scroll');
+  body.dataset.position =pagePosition;
+  body.style.top=-pagePosition+'px';
 })
 
 function createModal(content) {
@@ -22,6 +26,11 @@ function createModal(content) {
   closeElement.addEventListener("click", e => {
     e.preventDefault();
     body.removeChild(overlayElement);
+    let pagePosition=parseInt(body.dataset.position,10);
+    body.style.top='avto';
+    body.classList.remove('disable-scroll');
+    window.scroll({top:pagePosition,left:0});
+    body.removeAttribute('data-position');
   })
   return overlayElement;
 }
@@ -153,4 +162,4 @@ $('.form').submit(e=>{
 $(".app-close-modal").click(e=>{
 e.preventDefault();
 $.fancybox.close();
-})
+});
