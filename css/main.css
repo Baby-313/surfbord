@@ -1027,23 +1027,22 @@
 @media screen and (max-width: 768px) {
   .arrow {
     position: absolute;
-    margin-bottom: 19.6rem;
-    margin-left: 39.6rem;
+    right: 8rem;
+    top: 13rem;
+    z-index: 1;
   }
   .arrow--left {
-    z-index: 1;
-    margin-left: 8.5rem;
+    left: 8rem;
   }
 }
 @media screen and (max-width: 480px) {
   .arrow {
     position: absolute;
-    margin-bottom: 19.6rem;
-    margin-left: 34.6rem;
+    right: 1.5rem;
   }
   .arrow--left {
     z-index: 1;
-    margin-left: 0.5rem;
+    left: 1.5rem;
   }
 }
 
@@ -1119,7 +1118,7 @@
 }
 
 .overlay {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;

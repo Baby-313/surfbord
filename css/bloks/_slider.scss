@@ -42,20 +42,19 @@
 .arrow{
     @include tablets{
         position: absolute;
-        margin-bottom: 19.6rem;
-        margin-left: 39.6rem;
-        &--left{
+        right: 8rem;
+        top: 13rem;
         z-index: 1;
-        margin-left: 8.5rem;
+        &--left{
+        left: 8rem;
         }
     }
     @include phones{
         position: absolute;
-        margin-bottom: 19.6rem;
-        margin-left: 34.6rem;
+        right: 1.5rem;
         &--left{
         z-index: 1;
-        margin-left: .5rem;
+        left: 1.5rem;
         }
     }
 }

@@ -31,7 +31,6 @@ const items=document.querySelector("#list");
 const computedStyle=getComputedStyle(list);
 var offsetWidth = document.getElementById('slide').offsetWidth;
 var offsetHeight = document.getElementById('slide').offsetHeight;
-alert(`${offsetWidth} x ${offsetHeight}`);
 
 let currentRight=0;
 
@@ -42,6 +41,9 @@ rightbtn.addEventListener("click",e=>{
     if (currentRight<100) {
         items.style.right=`${currentRight+offsetWidth}px`;      
     }
+    if (currentRight>100) {
+      items.style.right=`${currentRight*0}px`;      
+  }
 });
 
 leftbtn.addEventListener("click",e=>{
@@ -51,6 +53,9 @@ leftbtn.addEventListener("click",e=>{
     if (currentRight>0) {
         items.style.right=`${currentRight-offsetWidth}px`;      
     }
+    if (currentRight<=0) {
+      items.style.right=`${currentRight+offsetWidth}px`;      
+  }
 });
 
 $(".click__info").click(function (e) {
