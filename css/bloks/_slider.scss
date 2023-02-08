@@ -1,126 +1,97 @@
-.slider{
+
+  .slider{
     position: relative;
-    background-color: #F8FAF9;
-    &__list{
-        display: flex;
-        position: relative;
-        right: 0;
-        transition: 1s;
-        &-wrap{
-            display: flex;
-            width: 100vw;
-            overflow: hidden;
-            @include tablets{
-                justify-content: center;
-            }
-        }
-    }
+    display: flex;
+    justify-content: flex-end;
+    background: linear-gradient(rgb(0 0 0 / 50%)), url('../img/slider.png') center center no-repeat;
+	  background-size: cover;
     &__container{
-        display: flex;
-        align-items: center;
+      display: flex;
+      justify-content: flex-end;
+      height: 100vh;
     }
-    &__item{
-        display: flex;
-        width: 100vw;
-        max-width: 914px;
-        justify-content: center;
-        &:last-child{
-            padding-left: 0;
-            margin-left: 0;
-        }
-        @include tablets{
-            flex-direction: column;
-            align-items: center;
-            margin-left: 100vw;
-            &:last-child{
-                margin-left: 0;
-            }
-        }
-    }
-
-}
-.arrow{
-    @include tablets{
-        position: absolute;
-        right: 8rem;
-        top: 13rem;
-        z-index: 1;
-        &--left{
-        left: 8rem;
-        }
-    }
-    @include phones{
-        position: absolute;
-        right: 1.5rem;
-        &--left{
-        z-index: 1;
-        left: 1.5rem;
-        }
-    }
-}
-.arrow__icon{
-    display: block;
-    width: 0.8rem;
-    height: 1.6rem; 
-
-}
-.info{
-    &__item{
-        margin-right: 3.2rem;
-        &:last-child{
-            margin: 0;
-        }
-    }
-    &__title{
-        color: #666;
-        font-weight: 400;
-        font-size: 18px;
-    }
-    &__text{
-        color: #000;
-        font-weight: 700;
-        font-size: 18px;
-    }
-}
-.params{
-    width: 273px;
-    height: 291px;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .slider__title {
+    color: #fff;
     position: absolute;
-    border-radius: 5px;
-    padding: 25px;
-    top: 0%;
-    right: 0%;
-    left: 100%;
-    display: none;
-    color: #1E1F20;
-    background: rgba(255, 255, 255, 0.8);
-    background: rgba(0, 0, 0, 0.06);
-    &__img{
-        width: 24px;
-        height: 24px;
-    }
-    &__item{
-        display: flex;
-        padding-bottom: 28px;
-    }
-    &__img-icon{
-        width: 24px;
-        height: 24px;
-    }
-    &__content{
-        display: flex;
-        justify-content: space-between;
-        width: 75%;
-    }
-    &__text{
-        color: #000;
-        font-weight: 400;
-        font-size: 16px;
-    }
-    &__title{
-        color: #000;
-        font-weight: 500;
-        font-size: 16px;
-    }
+    top: 20px;
+    left: 0;
+  }
+  
+  .slider-acco{
+    display: flex;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    width: 100%;
+    justify-content: flex-end;
 
-}
+  }
+  
+  .slide-acco__line{
+    display: flex;
+    cursor: pointer;
+    height: 100vh;
+  }
+  
+  .slide-acco__trigger{
+    position: relative;
+    min-width: 102px;
+    &--one{
+        background: linear-gradient(rgb(0 0 0 / 50%)),
+        url('../img/slide1.png') center center no-repeat;
+        background-size: cover;
+
+    }
+    &--two{
+        background: linear-gradient(rgb(0 0 0 / 50%)),
+        url('../img/slide2.png') center center no-repeat;
+        background-size: cover;
+    }
+    &--three{
+        background: linear-gradient(rgb(0 0 0 / 50%)),
+        url('../img/slide3.png') center center no-repeat;
+        background-size: cover;
+    }
+  }
+
+  .slide-acco__trigger-text{
+    position: absolute;
+    left: 50%;
+    bottom: 1rem;
+    transform: rotate(-90deg) translate(0%, -50%);
+    transform-origin: 0 0;
+    white-space: nowrap;
+    font-weight: 700;
+    font-size: 48px;
+  }
+  
+  .slide-acco__content{
+    width: 0;
+    padding: 0px;
+    opacity: 1;
+    overflow: hidden;
+    transition: .7s;
+    color: #fff;
+    background: #333537E5;
+    backdrop-filter: blur(3px);
+  }
+  .slide-acco__line_active > .slide-acco__content {
+    width: 564px;
+    padding: 20px;
+    box-sizing: border-box;
+    opacity: 1;
+    z-index: 10;
+    @include tablets{
+      width: 472;
+    }
+  }
+  
+  

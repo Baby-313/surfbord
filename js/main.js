@@ -38,8 +38,8 @@ const leftbtn=document.querySelector("#left");
 const rightbtn=document.querySelector("#right");
 const items=document.querySelector("#list");
 const computedStyle=getComputedStyle(list);
-var offsetWidth = document.getElementById('slide').offsetWidth;
-var offsetHeight = document.getElementById('slide').offsetHeight;
+var offsetWidth = document.getElementById('goods').offsetWidth;
+var offsetHeight = document.getElementById('goods').offsetHeight;
 
 let currentRight=0;
 
@@ -73,7 +73,7 @@ $(".click__info").click(function (e) {
 	var menu = $(this).closest('.humans__list');
 	
 	if (false == $(this).next().is(':visible')) {
-		menu.find('.human__info').removeClass('slide active');
+		menu.find('.human').removeClass('slide active');
 		menu.find('.human__info').slideUp();
 	}
 	
@@ -163,3 +163,26 @@ $(".app-close-modal").click(e=>{
 e.preventDefault();
 $.fancybox.close();
 });
+
+const lines = document.querySelectorAll('.slide-acco__line');
+
+for (let index = 0; index < lines.length; index++) {
+  const element = lines[index]
+  element.addEventListener('click', e => {
+    e.preventDefault()
+    if (e.target.classList.contains('slide-acco__content')) return
+    
+    const currentLine = e.target.closest('.slide-acco__line');
+    
+    for (let i = 0; i < lines.length; i++) {
+      if (lines[i] !== currentLine)
+      lines[i].classList.remove('slide-acco__line_active')
+    } 
+    
+    if (currentLine.classList.contains('slide-acco__line_active')) {
+      currentLine.classList.remove('slide-acco__line_active')
+    } else {
+      currentLine.classList.add('slide-acco__line_active')
+    } 
+  })
+}

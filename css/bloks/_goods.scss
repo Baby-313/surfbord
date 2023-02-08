@@ -1,0 +1,104 @@
+.goods{
+    &__img-wrap{
+        width: 26rem;
+        height: 34rem;
+        background: url(../img/surfboardback.png)center center no-repeat;
+        margin-right: 3.6rem;
+        background-size: contain;
+        @include tablets{
+            margin: 0;
+            width: 19.9rem;
+            height: 26rem;
+        }
+    }
+    &__desc{
+        font-weight: 400;
+        font-size: 18px;
+        margin-bottom: 1.5rem;
+    }
+    &__content{
+        width: 23.3rem;
+        @include tablets{
+            display: flex;
+            width: 80%;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+    }
+    &__title{
+        color: #000;
+        font-weight: 700;
+        font-size: 36px;
+        text-transform: uppercase;
+        @include tablets{
+            font-size: 30px;
+        }
+    }
+    &__info{
+        display: flex;
+        margin-bottom: 1.5rem;
+    }
+    &__bottom{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        @include tablets{
+            width: 60%;
+        }
+        @include phones{
+            width: 75%;
+        }
+    }
+    &__btn{
+        margin: 0;
+    }
+    &__price{
+        color: #151515;
+        font-weight: 300;
+        font-size: 3.75rem;
+        text-transform: uppercase;
+    }
+
+}
+.goods__params{
+    position: relative;
+    display: flex;
+    width: 5.6rem;
+    height: 5.6rem;
+    background-color: #3A587E;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    border-radius: 5%;
+    margin-bottom: 3.2rem;
+    &__img-wrap{
+        width: 2.3rem;
+        height: 2.3rem;
+        margin-bottom: 0.4rem;
+    }
+    &__img{
+        width: 2.3rem;
+        height: 2.3rem;
+    }
+    &__text{
+        color: #fff;
+        font-weight: 700;
+        font-size: 14px;
+        text-transform: uppercase;
+        margin-bottom: 0.75rem;
+
+    }
+    @include tablets{
+        display: none;
+    }
+    &:hover{
+        .params__list{
+            display: block;
+        }
+    }
+}
+.goods__params:hover .params__list{
+        display: flex;
+        flex-direction: column;
+}
