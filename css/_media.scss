@@ -14,3 +14,9 @@
         @content;
     }
 }
+
+@mixin min-phones {
+    @media screen and (max-width:$min-phones) {
+        @content;
+    }
+}

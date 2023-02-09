@@ -72,11 +72,16 @@
     font-weight: 700;
     font-size: 48px;
   }
-  
+  .slide-acco__line_active{
+    @include phones{
+      z-index: 1;
+      position:absolute;
+    }
+  }
   .slide-acco__content{
     width: 0;
     padding: 0px;
-    opacity: 1;
+    opacity: 0;
     overflow: hidden;
     transition: .7s;
     color: #fff;
@@ -85,12 +90,32 @@
   }
   .slide-acco__line_active > .slide-acco__content {
     width: 564px;
-    padding: 20px;
+    padding: 30px;
     box-sizing: border-box;
     opacity: 1;
     z-index: 10;
     @include tablets{
-      width: 472;
+      width: 31rem;
+    }
+    @include phones{
+      width: 80vw;
+    }
+    @include min-phones{
+      width: 70vw;
+    }
+  }
+  .close-slide{
+    @include tablets{
+      display: none;
+    }
+    @include phones{
+    display: block;
+    color: #fff;
+    position: absolute;
+    right: 1rem;
+    top: 1rem ;
+    width: 20px;
+    height: 20px;
     }
   }
   
