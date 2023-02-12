@@ -161,4 +161,11 @@
   <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 8" id="Polygon 1">
     <path d="M4.00002 0.5L7.89713 7.25L0.102901 7.25L4.00002 0.5Z" fill="currentcolor"></path>
   </symbol>
+    <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 9" id="Регулятор видео">
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M3.79059 0.905618C5.75403 0.905618 7.3458 2.49404 7.3458 4.45323C7.3458 6.41241 5.75403 8.00188 3.79059 8.00188C1.82708 8.00188 0.235337 6.41241 0.235337 4.45323C0.235337 2.49404 1.82708 0.905618 3.79059 0.905618Z" fill="#626262"></path>
+  </symbol>
+  <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 7 11" id="Vector">
+    <path d="M6.31166 6.09046L1.27685 10.1017C0.795504 10.4835 0.0873108 10.1404 0.0873108 9.5263V1.50381C0.0873108 0.889669 0.795504 0.546638 1.27685 0.928398L6.31166 4.93965C6.67682 5.23288 6.67682 5.79722 6.31166 6.09046Z" fill="#fff"></path>
+  </symbol>
+
 </svg>

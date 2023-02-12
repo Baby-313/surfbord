@@ -121,7 +121,7 @@
   background-color: #1968B1;
   background-size: cover;
   font-family: "Alegreya Sans", sans-serif;
-  height: 100vh;
+  height: 100%;
   min-height: 40.6rem;
   color: #fff;
 }
@@ -742,6 +742,10 @@
   opacity: 1;
 }
 
+.footer {
+  width: 100%;
+  margin-bottom: 15px;
+}
 .footer__contacts {
   color: #000;
 }
@@ -838,7 +842,7 @@
 }
 
 .section {
-  height: 100vh;
+  height: 100%;
   min-height: 40.6rem;
   width: 100vw;
   display: -webkit-box;
@@ -924,42 +928,6 @@
   text-align: center;
 }
 
-/**
-@media (max-width:480px) {
-
-    .section{
-        &__title{
-            font-size: 2.5rem;
-            line-height: 2.2rem;
-        }
-    }
-
-    .headline{
-        &__title{
-            font-size: 2.5rem;
-            line-height: 2.2rem;
-        }
-    }
-
-
-}
-@media (max-width:320px) {
-    .section{
-        &__title{
-            font-size: 1.8rem;
-            line-height: 1.5rem;
-        }
-    }
-
-    .headline{
-        &__title{
-            font-size: 1.8rem;
-            line-height: 1.5rem;
-        }
-    }
-
-}
-*/
 .shop {
   position: relative;
   background-color: #F8FAF9;
@@ -1672,6 +1640,242 @@ ul {
   }
 }
 
+.player {
+  position: relative;
+}
+.player__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.player__controls {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  height: 2rem;
+  background: #404040;
+  position: absolute;
+  border: none;
+  bottom: 0;
+}
+.player.active .player__controls {
+  display: none;
+}
+.player:hover .player__controls {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.player__start {
+  padding: 0;
+  top: 50%;
+  left: 1.5rem;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  border: 12px solid transparent;
+  width: 0px;
+  height: 0px;
+  border-left-color: #626262;
+  border-top-color: #404040;
+  border-bottom-color: #404040;
+  border-right-width: 0;
+  border-top-width: 11px;
+  border-bottom-width: 11px;
+  position: absolute;
+}
+.player__playback-button {
+  width: 12px;
+  height: 12px;
+  background: #626262;
+  border-radius: 50%;
+  border: none;
+  position: absolute;
+  padding: 0;
+  top: 55%;
+  left: 0;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+.player__playback {
+  height: 1.5rem;
+  width: 75%;
+  position: relative;
+  margin-left: 3rem;
+}
+.player__playback::before {
+  content: "";
+  height: 4px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  background: #626262;
+  display: block;
+}
+.player__splash {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 660px;
+  height: 405px;
+  background: url("../img/slide2.png");
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+@media screen and (max-width: 768px) {
+  .player__splash {
+    width: 594px;
+    height: 352px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .player__splash {
+    width: 100%;
+    height: 100%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .player__splash--icon {
+    width: 67px;
+    height: 98px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .player__splash--icon {
+    width: 45px;
+    height: 65px;
+  }
+}
+.player__duration {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-right: 1.5rem;
+}
+.player.active .player__splash {
+  display: none;
+}
+.player.paused .player__start {
+  width: 14px;
+  height: 22px;
+  border: none;
+  background: #404040;
+}
+.player.paused .player__start::after, .player.paused .player__start::before {
+  content: "";
+  position: absolute;
+  width: 5px;
+  top: 0;
+  bottom: 0;
+  background: #626262;
+}
+.player.paused .player__start::after {
+  right: 0;
+}
+.player.paused .player__start::before {
+  left: 0;
+}
+@media screen and (max-width: 768px) {
+  .player__elem {
+    width: 594px;
+    height: 352px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .player__elem {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.map {
+  width: 100%;
+  height: 100%;
+}
+
+.fixed-menu {
+  position: absolute;
+  top: 40%;
+  right: 2%;
+  width: 20px;
+  height: 200px;
+  color: #fff;
+}
+.fixed-menu--shadowed {
+  color: #000;
+}
+.fixed-menu__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  height: 100%;
+}
+.fixed-menu__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.fixed-menu__item--active {
+  width: 16px;
+  height: 16px;
+  border: 1px solid;
+  border-radius: 50%;
+}
+.fixed-menu__item:hover {
+  width: 16px;
+  height: 16px;
+  border: 1px solid;
+  border-radius: 50%;
+}
+.fixed-menu__link {
+  display: block;
+  width: 9px;
+  height: 9px;
+  background: currentColor;
+  border-radius: 50%;
+  border: none;
+  opacity: 0.5;
+}
+
+.fixed-menu--shadowed .fixed-menu__link {
+  background: #000;
+}
+
 html {
   font-size: 16px;
 }
@@ -1693,7 +1897,7 @@ html {
 
 html,
 body {
-  height: 100vh;
+  height: 100%;
 }
 
 body {
@@ -1713,13 +1917,6 @@ body {
   width: 100%;
 }
 
-.wrapper {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-}
-
 .maincontent {
   height: 100%;
   -webkit-transition: -webkit-transform 1s;
@@ -1727,6 +1924,13 @@ body {
   transition: transform 1s;
   transition: transform 1s, -webkit-transform 1s;
   will-change: transform;
+}
+
+.wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
 }
 
 .container {

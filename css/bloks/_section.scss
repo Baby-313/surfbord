@@ -1,5 +1,5 @@
 .section{
-    height: 100vh;
+    height: 100%;
     min-height: 40.6rem;
     width: 100vw;
     display: flex;
@@ -66,39 +66,3 @@
         text-align: center;
     }
 }
-/**
-@media (max-width:480px) {
-
-    .section{
-        &__title{
-            font-size: 2.5rem;
-            line-height: 2.2rem;
-        }
-    }
-
-    .headline{
-        &__title{
-            font-size: 2.5rem;
-            line-height: 2.2rem;
-        }
-    }
-
-
-}
-@media (max-width:320px) {
-    .section{
-        &__title{
-            font-size: 1.8rem;
-            line-height: 1.5rem;
-        }
-    }
-
-    .headline{
-        &__title{
-            font-size: 1.8rem;
-            line-height: 1.5rem;
-        }
-    }
-
-}
-*/

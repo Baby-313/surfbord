@@ -200,41 +200,259 @@ for (let index = 0; index < lines.length; index++) {
     })
   });
 };
-const sections=$("section");
+let player;
+const playerContainer = $(".player");
+
+let eventsInit = () => {
+  $(".player__start").click(e => {
+    e.preventDefault();
+  
+    if (playerContainer.hasClass("paused")) {
+      player.pauseVideo();
+    } else {
+      player.playVideo();
+    }
+  });
+
+  $(".player__playback").click(e => {
+    const bar = $(e.currentTarget);
+    const clickedPosition = e.originalEvent.layerX;
+    
+    const newButtonPositionPercent = (clickedPosition / bar.width()) * 100;
+    const newPlaybackPositionSec =
+      (player.getDuration() / 100) * newButtonPositionPercent;
+    
+    $(".player__playback-button").css({
+      left: `${newButtonPositionPercent}%`
+    });
+    
+    player.seekTo(newPlaybackPositionSec);
+   });
+
+   $(".player__splash").click(e => {
+    player.playVideo();
+  })
+};
+
+const formatTime=timeSec=>{
+  const roundTime=Math.round(timeSec);
+
+  const minutes=addZero(Math.floor(roundTime/60));
+  const seconds=addZero(roundTime-minutes*60);
+
+  function addZero(num) {
+    return num<10?`0${num}`:num;
+  }
+
+  return `${minutes}:${seconds}`
+}
+
+const onPlayerReady =()=>{
+  const durationSec=player.getDuration();
+  $(".player__duration-estimate").text(formatTime(durationSec));
+
+  if (typeof interval !== "undefined") {
+    clearInterval(interval);
+  }
+ 
+  interval = setInterval(() => {
+    const completedSec = player.getCurrentTime();
+    const completedPercent=(completedSec/durationSec)*100;
+
+    $(".player__playback-button").css({
+      left:`${completedPercent}%`
+    })
+    $(".player__duration-completed").text(formatTime(completedSec));
+  }, 1000);
+}
+const onPlayerStateChange = event => {
+  /*
+    -1 (воспроизведение видео не начато)
+    0 (воспроизведение видео завершено)
+    1 (воспроизведение)
+    2 (пауза)
+    3 (буферизация)
+    5 (видео подают реплики).
+  */
+  switch (event.data) {
+    case 1:
+      playerContainer.addClass("active");
+      playerContainer.addClass("paused");
+      break;
+  
+    case 2:
+      playerContainer.removeClass("active");
+      playerContainer.removeClass("paused");
+      break;
+  }
+};
+
+function onYouTubeIframeAPIReady() {
+  player = new YT.Player('yt-player', {
+    height: '405',
+    width: '660',
+    videoId: 'ma67yOdMQfs',
+    events: {
+      'onReady': onPlayerReady,
+      'onStateChange': onPlayerStateChange
+    },
+    playerVars: {
+      controls: 0,
+      disablekb: 1,
+      showinfo: 0,
+      rel: 0,
+      autoplay: 0,
+      modestbranding: 0
+    }
+  });
+}
+eventsInit();
+
+let myMap;
+const init = () => {
+ myMap = new ymaps.Map("map", {
+   center: [55.752004, 37.576133],
+   zoom: 13,
+   controls: [],
+ });
+ 
+ let coords = [
+     [55.752044, 37.599649]
+  ],
+  myCollection = new ymaps.GeoObjectCollection({}, {
+    draggable: false,
+    iconLayout: 'default#image',
+    iconImageHref: './img/map.svg',
+    iconImageSize: [46, 57],
+    iconImageOffset: [-35, -52]
+  });
+ 
+ for (let i = 0; i < coords.length; i++) {
+   myCollection.add(new ymaps.Placemark(coords[i]));
+ }
+ 
+ myMap.geoObjects.add(myCollection);
+ 
+ myMap.behaviors.disable('scrollZoom');
+};
+ 
+ymaps.ready(init);
+
+
+const sections=$(".section");
 const display=$(".maincontent")
+const sidemenu=$(".fixed-menu");
+const menuItems=sidemenu.find(".fixed-menu__item")
+
+const mobileDetect= new MobileDetect(window.navigator.userAgent);
+const isMobile=mobileDetect.mobile();
+
+let inscroll=false;
 
 sections.first().addClass("active");
 
+const countSectionPosition=sectionEq=>{
+  const position=sectionEq*-100;
+  if (isNaN(position)) {
+    console.error('передано неверное значение в countSectionPosition');
+    return0;
+  }
+  return position;
+}
+
+const changeMenuThemeForSection=(sectionEq)=>{
+  const currentsection=sections.eq(sectionEq);
+  const menuTheme=currentsection.attr("data-sidemenu-theme");
+  const activeClass="fixed-menu--shadowed"
+
+  if (menuTheme=="black") {
+    sidemenu.addClass(activeClass);
+  } else {
+    sidemenu.removeClass(activeClass);
+  }
+}
+
+const resetActiveClassForItem=(items,itemEq,activeClass)=>{
+  items.eq(itemEq).addClass(activeClass).siblings().removeClass(activeClass);
+}
+
 const performTransition=sectionEq=>{
-  const position=sectionEq*100;
+  if (inscroll) return;
+
+  const transitionOver=1000;
+  const mouseInertiaOver=300;
+
+  inscroll=true;
+
+  const position=countSectionPosition(sectionEq);
+
+  changeMenuThemeForSection(sectionEq);
 
   display.css({
     transform:`translateY(${position}%)`
   });
-  sections.eq(sectionEq).addClass('active').siblings().removeClass('active')
- }
 
-const scrollViewport=direction=>{
-  const activesection=sections.filter("active");
+  resetActiveClassForItem(sections,sectionEq,"active");
+
+  setTimeout(() => {
+    inscroll=false;
+    resetActiveClassForItem(menuItems,sectionEq,"fixed-menu__item--active")
+  }, transitionOver+mouseInertiaOver );
+}
+
+const viewportScroller=()=>{
+  const activesection=sections.filter(".active");
   const nextsection=activesection.next();
   const prevsection=activesection.prev();
 
-  if (direction==="next") {
-    performTransition(nextsection.index());
-  }
-
-  if (direction==="prev") {
-    performTransition(prevsection.index());
+  return {
+    next(){
+      if (nextsection.length) {
+        performTransition(nextsection.index());
+      }
+    },
+    prev(){
+      if (prevsection.length) {
+        performTransition(prevsection.index());
+      }
+    }
   }
 }
 
 $(window).on("wheel",e=>{
   const deltaY=e.originalEvent.deltaY;
-
+  const scroller=viewportScroller();
   if (deltaY>0) {
-    scrollViewport("next");
+    scroller.next();
   }
   if (deltaY<0) {
-    scrollViewport("prev");
+    scroller.prev();
   }
 })
+
+$(".wraper").on("touchmove", e => e.preventDefault());
+
+$("[data-scroll-to]").click(e=>{
+  e.preventDefault();
+
+  const $this=$(e.currentTarget);
+  const target=$this.attr("data-scroll-to");
+  const reqsection=$(`[data-section-id=${target}]`);
+
+  performTransition(reqsection.index());
+})
+
+//https://github.com/mattbryson/TouchSwipe-Jquery-Plugin#bower
+if (isMobile) {
+  $("body").swipe( {
+    swipe:function(event, direction, ) {
+      const scroller=viewportScroller();
+      let scrollDirection="";
+  
+      if (direction=="up") scrollDirection="next";
+      if (direction=="down") scrollDirection="prev";
+  
+      scroller[scrollDirection]();
+    }
+  });
+}

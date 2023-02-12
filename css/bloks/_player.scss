@@ -1,0 +1,138 @@
+.player{
+    position: relative;
+    &__container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    &__controls{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        height: 2rem;
+        background: #404040;
+        position: absolute;
+        border: none;
+        bottom: 0;
+    }
+    &.active .player__controls{
+        display: none;
+    }
+    &:hover .player__controls{
+        display: flex;
+    }
+    &__start{
+        padding: 0;
+        top: 50%;
+        left: 1.5rem;
+        transform: translate(-50%,-50%);
+        border: 12px solid transparent;
+        width: 0px;
+        height: 0px;
+        border-left-color: #626262;
+        border-top-color: #404040;
+        border-bottom-color: #404040;
+        border-right-width: 0;
+        border-top-width:11px ;
+        border-bottom-width:11px ;
+        position: absolute;
+    }
+    &__playback-button{
+        width: 12px;
+        height: 12px;
+        background: #626262;
+        border-radius: 50%;
+        border: none;
+        position: absolute;
+        padding: 0;
+        top: 55%;
+        left: 0;
+        transform: translate(-50%,-50%);
+    }
+    &__playback{
+        height: 1.5rem;
+        width: 75%;
+        position: relative;
+        margin-left: 3rem;
+    }
+    &__playback::before{
+        content: "";
+        height: 4px;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 0;
+        background: #626262;
+        display: block;
+    }
+    &__splash{
+        display: flex;
+        width: 660px;
+        height: 405px;
+        background: url('../img/slide2.png');
+        background-size: cover;
+        position: absolute;
+        top: 0;
+        justify-content: center;
+        align-items: center;
+        @include tablets{
+            width: 594px;
+            height: 352px;
+        }
+        @include phones{
+            width:100%;
+            height: 100%;
+        }
+        &--icon{
+            @include tablets{
+                width: 67px;
+                height: 98px;
+            }
+            @include phones{
+                width:45px;
+                height: 65px;
+            }
+        }
+    }
+    &__duration{
+        display: flex;
+        margin-right: 1.5rem;
+    }
+    &.active .player__splash{
+        display: none;
+    }
+
+    &.paused{
+        .player__start{
+            width: 14px;
+            height: 22px;
+            border: none;
+            background: #404040;
+            &::after,
+            &::before{
+                content: "";
+                position: absolute;
+                width: 5px;
+                top: 0;
+                bottom: 0;
+                background: #626262;
+            }
+            &::after{
+                right: 0;
+            }
+            &::before{
+                left: 0;
+            }
+        }
+    }
+    &__elem{
+        @include tablets{
+            width: 594px;
+            height: 352px;
+        }
+        @include phones{
+            width: 100%;
+            height: 100%;
+        }
+    }   
+}
