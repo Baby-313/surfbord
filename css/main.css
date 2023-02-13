@@ -1468,7 +1468,7 @@ li.slide .team__buttom--active {
 
 .fancybox-inner {
   width: 100vw;
-  height: 100vh;
+  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1543,7 +1543,7 @@ ul {
   display: -ms-flexbox;
   display: flex;
   cursor: pointer;
-  height: 100vh;
+  height: 100%;
 }
 
 .slide-acco__trigger {
