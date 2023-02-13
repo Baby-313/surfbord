@@ -1509,7 +1509,7 @@ li.slide .team__buttom--active {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  height: 100vh;
+  height: 100%;
 }
 
 ul {
